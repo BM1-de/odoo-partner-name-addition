@@ -44,6 +44,10 @@ jobs:
         run: |
           set -o pipefail
           git config --global --add safe.directory "$PWD"
+          # oca_install_addons appends to test-requirements.txt and writes
+          # test-constraints.txt; the protocol must show the tagged tree as is
+          git checkout -- test-requirements.txt 2> /dev/null || rm -f test-requirements.txt
+          rm -f test-constraints.txt
           # inside build/ (ignored by git), so the working tree stays clean
           OUT="$PWD/build/protocol"
           mkdir -p "$OUT"
