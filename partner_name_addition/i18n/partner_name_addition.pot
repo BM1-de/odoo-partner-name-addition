@@ -1,0 +1,72 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_name_addition
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0-20261015\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-23 06:29+0000\n"
+"PO-Revision-Date: 2026-10-23 06:29+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: partner_name_addition
+#: model:ir.model,name:partner_name_addition.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: partner_name_addition
+#: model:ir.model.fields,field_description:partner_name_addition.field_ir_qweb_field_contact__display_name
+#: model:ir.model.fields,field_description:partner_name_addition.field_res_partner__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: partner_name_addition
+#. odoo-python
+#: code:addons/partner_name_addition/models/ir_qweb_fields.py:0
+msgid ""
+"Do not print the name addition in the address, for layouts that print it on "
+"their own"
+msgstr ""
+
+#. module: partner_name_addition
+#: model:ir.model.fields,field_description:partner_name_addition.field_ir_qweb_field_contact__id
+#: model:ir.model.fields,field_description:partner_name_addition.field_res_partner__id
+msgid "ID"
+msgstr ""
+
+#. module: partner_name_addition
+#: model:ir.model.fields,field_description:partner_name_addition.field_res_partner__name_addition
+#: model:ir.model.fields,field_description:partner_name_addition.field_res_users__name_addition
+msgid "Name Addition"
+msgstr ""
+
+#. module: partner_name_addition
+#: model_terms:ir.ui.view,arch_db:partner_name_addition.view_partner_form
+msgid "Name addition, e.g. trade name or department"
+msgstr ""
+
+#. module: partner_name_addition
+#: model:ir.model,name:partner_name_addition.model_ir_qweb_field_contact
+msgid "Qweb Field Contact"
+msgstr ""
+
+#. module: partner_name_addition
+#: model:ir.model.fields,help:partner_name_addition.field_res_partner__name_addition
+#: model:ir.model.fields,help:partner_name_addition.field_res_users__name_addition
+msgid ""
+"Second name line printed in the address, below the name: for example a trade"
+" name, a department or the name of a practice. Contacts of a company without"
+" an own name addition use the one of the company."
+msgstr ""
+
+#. module: partner_name_addition
+#. odoo-python
+#: code:addons/partner_name_addition/models/ir_qweb_fields.py:0
+msgid "Without name addition"
+msgstr ""

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Baumgärtner Marketing GmbH
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="name">res.partner.form (partner_name_addition)</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//field[@name='company_type']/following-sibling::h1"
+                position="after"
+            >
+                <field
+                    name="name_addition"
+                    class="w-md-75"
+                    placeholder="Name addition, e.g. trade name or department"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>
