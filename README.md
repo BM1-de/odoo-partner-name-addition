@@ -62,6 +62,12 @@ address between the name and the street. Alpha, no warranty.*
 
 [//]: # (addons)
 
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[partner_name_addition](partner_name_addition/) | 19.0.1.0.0 | <a href='https://github.com/bm1-phillip'><img src='https://github.com/bm1-phillip.png' width='32' height='32' style='border-radius:50%;' alt='bm1-phillip'/></a> | Second name line on the contact (trade name, department) between the name and the street of the address
+
 [//]: # (end addons)
 
 <!-- prettier-ignore-end -->
