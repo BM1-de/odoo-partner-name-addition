@@ -27,3 +27,15 @@ each version.
 
 The development status is _Alpha_ until the module has been used in production for one
 full year, _Beta_ after that.
+
+## 19.0.1.0.0 (Alpha) – protocol
+
+Checks before the tag on 23.10.2026.
+
+| Item                                  | Result                                                                                                                     |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| Tests in a fresh database             | passed on the working tree of 23.10.2026: 9 tests, 0 failures, 0 errors, 0 skipped. Repeated on the tagged commit (step 4) |
+| Coverage lines / branches             | 100 % of lines and 100 % of branches                                                                                       |
+| pre-commit, translations              | `pre-commit run --all-files` clean on 23.10.2026; `i18n/de.po` complete                                                    |
+| No real data                          | only invented persons and businesses (checked on 23.10.2026)                                                               |
+| Test protocol attached to the release | by the workflow `release` on the tag (GitHub release of 19.0.1.0.0)                                                        |
