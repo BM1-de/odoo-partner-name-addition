@@ -24,7 +24,7 @@ msgstr "Kontakt"
 #: model:ir.model.fields,field_description:partner_name_addition.field_ir_qweb_field_contact__display_name
 #: model:ir.model.fields,field_description:partner_name_addition.field_res_partner__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Anzeigename"
 
 #. module: partner_name_addition
 #. odoo-python
@@ -40,7 +40,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:partner_name_addition.field_ir_qweb_field_contact__id
 #: model:ir.model.fields,field_description:partner_name_addition.field_res_partner__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: partner_name_addition
 #: model:ir.model.fields,field_description:partner_name_addition.field_res_partner__name_addition
