@@ -45,6 +45,7 @@ msgstr "ID"
 #. module: partner_name_addition
 #: model:ir.model.fields,field_description:partner_name_addition.field_res_partner__name_addition
 #: model:ir.model.fields,field_description:partner_name_addition.field_res_users__name_addition
+#: model_terms:ir.ui.view,arch_db:partner_name_addition.view_partner_form
 msgid "Name Addition"
 msgstr "Namenszusatz"
 

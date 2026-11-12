@@ -15,6 +15,7 @@
                     <i
                         class="oi d-none d-md-inline-flex invisible"
                         data-icon="business"
+                        title="Name Addition"
                     />
                     <field
                         name="name_addition"
