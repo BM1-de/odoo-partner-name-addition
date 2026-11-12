@@ -12,7 +12,6 @@ class TestNameAddition(TransactionCase):
         cls.company = cls.env["res.partner"].create(
             {
                 "name": "Anna Beispiel",
-                "is_company": True,
                 "name_addition": "Praxis am Markt - Physiotherapie",
                 "street": "Musterweg 1",
                 "zip": "12345",
@@ -26,7 +25,6 @@ class TestNameAddition(TransactionCase):
         cls.plain = cls.env["res.partner"].create(
             {
                 "name": "Muster GmbH",
-                "is_company": True,
                 "street": "Hauptstraße 2",
                 "zip": "54321",
                 "city": "Beispielstadt",
@@ -37,11 +35,11 @@ class TestNameAddition(TransactionCase):
     def _lines(self, partner, **kwargs):
         return partner._display_address(**kwargs).split("\n")
 
-    def test_company_line_then_addition(self):
+    def test_company_addition_first(self):
+        # the address of a company has no name line of its own
         lines = self._lines(self.company)
-        self.assertEqual(lines[0], "Anna Beispiel")
-        self.assertEqual(lines[1], "Praxis am Markt - Physiotherapie")
-        self.assertEqual(lines[2], "Musterweg 1")
+        self.assertEqual(lines[0], "Praxis am Markt - Physiotherapie")
+        self.assertEqual(lines[1], "Musterweg 1")
 
     def test_child_contact_uses_company_addition(self):
         lines = self._lines(self.person)
@@ -49,14 +47,14 @@ class TestNameAddition(TransactionCase):
         self.assertEqual(lines[1], "Praxis am Markt - Physiotherapie")
         self.assertEqual(lines[2], "Musterweg 1")
 
-    def test_without_company(self):
-        lines = self._lines(self.person, without_company=True)
+    def test_without_name(self):
+        lines = self._lines(self.person, without_name=True)
         self.assertEqual(lines[0], "Praxis am Markt - Physiotherapie")
         self.assertEqual(lines[1], "Musterweg 1")
 
     def test_own_addition_wins(self):
         self.person.name_addition = "Abteilung Training"
-        lines = self._lines(self.person, without_company=True)
+        lines = self._lines(self.person, without_name=True)
         self.assertEqual(lines[0], "Abteilung Training")
 
     def test_no_addition_unchanged(self):
@@ -64,15 +62,15 @@ class TestNameAddition(TransactionCase):
             self.plain._display_address(),
             self.plain.with_context(skip_name_addition=True)._display_address(),
         )
-        self.assertEqual(self._lines(self.plain)[1], "Hauptstraße 2")
+        self.assertEqual(self._lines(self.plain)[0], "Hauptstraße 2")
 
     def test_blank_addition_ignored(self):
         self.plain.name_addition = "   "
-        self.assertEqual(self._lines(self.plain)[1], "Hauptstraße 2")
+        self.assertEqual(self._lines(self.plain)[0], "Hauptstraße 2")
 
     def test_context_skips_addition(self):
         lines = self._lines(self.company.with_context(skip_name_addition=True))
-        self.assertEqual(lines[1], "Musterweg 1")
+        self.assertEqual(lines[0], "Musterweg 1")
 
     def test_contact_address_recomputed(self):
         self.plain.name_addition = "Werk Nord"

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!-- Copyright 2026 Baumgärtner Marketing GmbH
      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
 <odoo>
@@ -7,15 +7,20 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form" />
         <field name="arch" type="xml">
-            <xpath
-                expr="//field[@name='company_type']/following-sibling::h1"
-                position="after"
-            >
-                <field
-                    name="name_addition"
-                    class="w-md-75"
-                    placeholder="Name addition, e.g. trade name or department"
-                />
+            <xpath expr="//h1[field[@name='name']]" position="after">
+                <label for="name_addition" class="d-md-none" />
+                <div class="d-flex align-items-baseline w-md-50 gap-2">
+                    <!-- keeps the field in line with the rows below, which start
+                         with an icon -->
+                    <i
+                        class="oi d-none d-md-inline-flex invisible"
+                        data-icon="business"
+                    />
+                    <field
+                        name="name_addition"
+                        placeholder="Name addition, e.g. trade name or department"
+                    />
+                </div>
             </xpath>
         </field>
     </record>

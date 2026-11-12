@@ -2,9 +2,9 @@
 
 # Namenszusatz für Odoo
 <!-- /!\ Non OCA Context : Set here the badge of your runbot / runboat instance. -->
-[![Pre-commit Status](https://github.com/BM1-de/odoo-partner-name-addition/actions/workflows/pre-commit.yml/badge.svg?branch=19.0)](https://github.com/BM1-de/odoo-partner-name-addition/actions/workflows/pre-commit.yml?query=branch%3A19.0)
-[![Build Status](https://github.com/BM1-de/odoo-partner-name-addition/actions/workflows/test.yml/badge.svg?branch=19.0)](https://github.com/BM1-de/odoo-partner-name-addition/actions/workflows/test.yml?query=branch%3A19.0)
-[![codecov](https://codecov.io/gh/BM1-de/odoo-partner-name-addition/branch/19.0/graph/badge.svg)](https://codecov.io/gh/BM1-de/odoo-partner-name-addition)
+[![Pre-commit Status](https://github.com/BM1-de/odoo-partner-name-addition/actions/workflows/pre-commit.yml/badge.svg?branch=20.0)](https://github.com/BM1-de/odoo-partner-name-addition/actions/workflows/pre-commit.yml?query=branch%3A19.0)
+[![Build Status](https://github.com/BM1-de/odoo-partner-name-addition/actions/workflows/test.yml/badge.svg?branch=20.0)](https://github.com/BM1-de/odoo-partner-name-addition/actions/workflows/test.yml?query=branch%3A19.0)
+[![codecov](https://codecov.io/gh/BM1-de/odoo-partner-name-addition/branch/20.0/graph/badge.svg)](https://codecov.io/gh/BM1-de/odoo-partner-name-addition)
 <!-- /!\ Non OCA Context : Set here the badge of your translation instance. -->
 
 <!-- /!\ do not modify above this line -->
