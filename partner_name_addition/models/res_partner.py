@@ -32,7 +32,9 @@ class ResPartner(models.Model):
         address_format, args = super()._prepare_display_address(
             without_name=without_name
         )
-        addition = self._get_name_addition()
+        # Odoo also formats the address of no partner at all, for example the map
+        # of a project without customer
+        addition = self._get_name_addition() if self else ""
         if not addition:
             return address_format, args
         args["name_addition"] = addition

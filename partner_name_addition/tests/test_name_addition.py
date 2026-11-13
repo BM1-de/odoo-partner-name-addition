@@ -68,6 +68,10 @@ class TestNameAddition(TransactionCase):
         self.plain.name_addition = "   "
         self.assertEqual(self._lines(self.plain)[0], "Hauptstraße 2")
 
+    def test_no_partner(self):
+        """Odoo formats the address of an empty recordset, too."""
+        self.assertFalse(self.env["res.partner"]._display_address().strip())
+
     def test_context_skips_addition(self):
         lines = self._lines(self.company.with_context(skip_name_addition=True))
         self.assertEqual(lines[0], "Musterweg 1")
